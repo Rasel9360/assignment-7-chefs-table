@@ -1,0 +1,57 @@
+[
+    {
+      "recipe_image": "chicken_curry.jpg",
+      "recipe_id": 1,
+      "recipe_name": "Chicken Curry",
+      "short_description": "A flavorful and aromatic chicken curry with a blend of spices.",
+      "ingredients": ["550 g chicken", "120 ml soy sauce", "200 g basil leaf", "400 g mushroom"],
+      "preparing_time": "45 min",
+      "calories": "380 calories"
+    },
+    {
+      "recipe_image": "spaghetti_bolognese.jpg",
+      "recipe_id": 2,
+      "recipe_name": "Spaghetti Bolognese",
+      "short_description": "Classic Italian pasta dish with rich tomato sauce and ground beef.",
+      "ingredients": ["400 g spaghetti", "300 g ground beef", "500 ml tomato sauce", "100 g onion", "2 cloves garlic"],
+      "preparing_time": "40 min",
+      "calories": "420 calories"
+    },
+    {
+      "recipe_image": "vegetable_stir_fry.jpg",
+      "recipe_id": 3,
+      "recipe_name": "Vegetable Stir-Fry",
+      "short_description": "A colorful and healthy stir-fry packed with fresh vegetables and tofu.",
+      "ingredients": ["300 g tofu", "150 g broccoli", "200 g bell peppers", "100 g carrots", "50 g snow peas"],
+      "preparing_time": "25 min",
+      "calories": "280 calories"
+    },
+    {
+      "recipe_image": "grilled_salmon.jpg",
+      "recipe_id": 4,
+      "recipe_name": "Grilled Salmon",
+      "short_description": "Juicy and tender grilled salmon fillets seasoned to perfection.",
+      "ingredients": ["4 salmon fillets", "60 ml olive oil", "2 tbsp lemon juice", "2 cloves garlic", "salt and pepper to taste"],
+      "preparing_time": "20 min",
+      "calories": "320 calories"
+    },
+    {
+      "recipe_image": "quinoa_salad.jpg",
+      "recipe_id": 5,
+      "recipe_name": "Quinoa Salad",
+      "short_description": "Refreshing and nutritious salad with quinoa, veggies, and a zesty dressing.",
+      "ingredients": ["200 g quinoa", "150 g cucumber", "100 g cherry tomatoes", "50 g red onion", "50 g feta cheese"],
+      "preparing_time": "30 min",
+      "calories": "250 calories"
+    },
+    {
+      "recipe_image": "banana_smoothie.jpg",
+      "recipe_id": 6,
+      "recipe_name": "Banana Smoothie",
+      "short_description": "Creamy and satisfying smoothie made with ripe bananas and Greek yogurt.",
+      "ingredients": ["2 ripe bananas", "250 ml Greek yogurt", "150 ml almond milk", "1 tbsp honey", "ice cubes"],
+      "preparing_time": "10 min",
+      "calories": "180 calories"
+    }
+  ]
+  
