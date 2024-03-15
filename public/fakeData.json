@@ -1,6 +1,6 @@
 [
     {
-      "recipe_image": "chicken_curry.jpg",
+      "recipe_image": "https://ibb.co/9WKb7sY",
       "recipe_id": 1,
       "recipe_name": "Chicken Curry",
       "short_description": "A flavorful and aromatic chicken curry with a blend of spices.",
@@ -9,7 +9,7 @@
       "calories": "380 calories"
     },
     {
-      "recipe_image": "spaghetti_bolognese.jpg",
+      "recipe_image": "https://ibb.co/7VQrjtt",
       "recipe_id": 2,
       "recipe_name": "Spaghetti Bolognese",
       "short_description": "Classic Italian pasta dish with rich tomato sauce and ground beef.",
@@ -18,7 +18,7 @@
       "calories": "420 calories"
     },
     {
-      "recipe_image": "vegetable_stir_fry.jpg",
+      "recipe_image": "https://ibb.co/CsCWZ90",
       "recipe_id": 3,
       "recipe_name": "Vegetable Stir-Fry",
       "short_description": "A colorful and healthy stir-fry packed with fresh vegetables and tofu.",
@@ -27,7 +27,7 @@
       "calories": "280 calories"
     },
     {
-      "recipe_image": "grilled_salmon.jpg",
+      "recipe_image": "https://ibb.co/jR1ndJ2",
       "recipe_id": 4,
       "recipe_name": "Grilled Salmon",
       "short_description": "Juicy and tender grilled salmon fillets seasoned to perfection.",
