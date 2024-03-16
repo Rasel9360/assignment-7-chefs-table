@@ -4,6 +4,8 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Recipes from './Components/Recipes/Recipes'
 import Sidebars from './Components/Sidebars/Sidebars'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -12,11 +14,13 @@ function App() {
   const handleCook = (recipe) => {
     console.log(recipe)
     // setRecipeCart([...recipeCart, recipe])
-    const isExist = recipeCart.find(item => item.id == recipe.id)
+    const isExist = recipeCart.find(item => item.id === recipe.id)
     if (!isExist) {
       setRecipeCart([...recipeCart, recipe])
     }
-    
+    else {
+      toast.warning("This item is already selected")
+    }
   }
 
   return (
@@ -35,6 +39,7 @@ function App() {
         <Recipes handleCook={handleCook}></Recipes>
         <Sidebars recipeCart={recipeCart}></Sidebars>
       </div>
+      <ToastContainer />
     </>
   )
 }

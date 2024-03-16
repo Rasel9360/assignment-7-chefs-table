@@ -18,9 +18,9 @@ const Sidebars = ({ recipeCart }) => {
                     </tr>
                 </thead>
                 {
-                    recipeCart.map((recipe, index, idx) =>
-                        <tbody key={idx}>
-                            <tr>
+                    recipeCart.map((recipe, index) =>
+                        <tbody key='' >
+                            <tr className="bg-base-200 mt-4">
                                 <td>{index + 1}</td>
                                 <td>{recipe.recipe_name}</td>
                                 <td>{recipe.preparing_time} <br /> min</td>
@@ -32,9 +32,7 @@ const Sidebars = ({ recipeCart }) => {
 
             </table>
 
-            {/* {
-                recipeCart.map(recipe => <Sidebar key={recipe.id} recipe={recipe}></Sidebar>)
-            } */}
+            
         </div>
     );
 };
