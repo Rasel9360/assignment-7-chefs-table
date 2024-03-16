@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Recipe from "../Recipe/Recipe";
 
-const Recipes = () => {
+const Recipes = ({handleCook}) => {
 
     const [recipeList, setRecipeList] = useState([]);
 
@@ -15,7 +15,10 @@ const Recipes = () => {
     return (
         <div className="lg:w-[65%] grid grid-cols-1 lg:grid-cols-2 gap-10">
             {
-                recipeList.map(recipe=><Recipe key={recipe.id} recipe={recipe}></Recipe>)
+                recipeList.map(recipe=><Recipe
+                    handleCook={handleCook}
+                    key={recipe.id}
+                    recipe={recipe}></Recipe>)
             }
         </div>
     );

@@ -1,8 +1,8 @@
 import { CiClock2 } from "react-icons/ci";
 import Icon from '../../assets/image/Frame2.svg'
 
-const Recipe = ({ recipe }) => {
-    console.log(recipe)
+const Recipe = ({ recipe, handleCook }) => {
+    // console.log(recipe)
     const { recipe_image, recipe_name, short_description, preparing_time, calories, ingredients } = recipe
     return (
         <div>
@@ -17,20 +17,18 @@ const Recipe = ({ recipe }) => {
                     <h3 className="text-lg font-medium">Ingredients: {ingredients.length} </h3>
                     <div className="ml-5">
                         <ul className="list-disc">
-                            <li>500g ground beef</li>
-                            <li>500g ground beef</li>
-                            <li>500g ground beef</li>
-                            <li>500g ground beef</li>
-                            <li>500g ground beef</li>
-                            <li>500g ground beef</li>
+                            {
+                                ingredients.map(ingredient => <li key=''>{ingredient}</li>)
+                            }
                         </ul>
+                        
                     </div>
                     <div className="flex justify-between">
                         <p className="flex items-center gap-2"><CiClock2></CiClock2> {preparing_time} minutes</p>
                         <p className="flex items-center gap-2"><img src={Icon} alt="" /> {calories} calories</p>
                     </div>
                     <div className="card-actions">
-                        <button className="btn btn-success rounded-full">Want to Cook</button>
+                        <button onClick={()=>handleCook(recipe)} className="btn btn-success rounded-full">Want to Cook</button>
                     </div>
                 </div>
             </div>
