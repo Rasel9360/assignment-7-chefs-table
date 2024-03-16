@@ -1,28 +1,33 @@
 import { CiClock2 } from "react-icons/ci";
 import Icon from '../../assets/image/Frame2.svg'
 
-const Recipe = () => {
+const Recipe = ({ recipe }) => {
+    console.log(recipe)
+    const { recipe_image, recipe_name, short_description, preparing_time, calories, ingredients } = recipe
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl border-2">
-                <figure className="px-10 pt-10">
-                    <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+            <div className="card bg-base-100 shadow-xl border-2">
+                <figure className="px-6 pt-6 ">
+                    <img src={recipe_image} alt="Shoes" className="rounded-xl w-full h-64 object-cover" />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">Spaghetti Bolognese</h2>
-                    <p>Classic Italian pasta dish with savory meat sauce.</p>
+                    <h2 className="card-title">{recipe_name}</h2>
+                    <p>{short_description}</p>
                     <hr />
-                    <ul className="list-disc">
-                        <li>500g ground beef</li>
-                        <li>500g ground beef</li>
-                        <li>500g ground beef</li>
-                        <li>500g ground beef</li>
-                        <li>500g ground beef</li>
-                        <li>500g ground beef</li>
-                    </ul>
+                    <h3 className="text-lg font-medium">Ingredients: {ingredients.length} </h3>
+                    <div className="ml-5">
+                        <ul className="list-disc">
+                            <li>500g ground beef</li>
+                            <li>500g ground beef</li>
+                            <li>500g ground beef</li>
+                            <li>500g ground beef</li>
+                            <li>500g ground beef</li>
+                            <li>500g ground beef</li>
+                        </ul>
+                    </div>
                     <div className="flex justify-between">
-                        <p className="flex items-center gap-2"><CiClock2></CiClock2> 30 minutes</p>
-                        <p className="flex items-center gap-2"><img src={Icon} alt="" /> 30 minutes</p>
+                        <p className="flex items-center gap-2"><CiClock2></CiClock2> {preparing_time} minutes</p>
+                        <p className="flex items-center gap-2"><img src={Icon} alt="" /> {calories} calories</p>
                     </div>
                     <div className="card-actions">
                         <button className="btn btn-success rounded-full">Want to Cook</button>

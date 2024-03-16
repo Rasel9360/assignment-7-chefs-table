@@ -1,9 +1,22 @@
+import { useEffect, useState } from "react";
 import Recipe from "../Recipe/Recipe";
 
 const Recipes = () => {
+
+    const [recipeList, setRecipeList] = useState([]);
+
+    useEffect(()=>{
+        fetch('fakeData.json')
+        .then((response) => response.json())
+        .then((data) => setRecipeList(data))
+    }, []); 
+    
+
     return (
-        <div className="w-3/4">
-            <Recipe></Recipe>
+        <div className="lg:w-[65%] grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {
+                recipeList.map(recipe=><Recipe key={recipe.id} recipe={recipe}></Recipe>)
+            }
         </div>
     );
 };

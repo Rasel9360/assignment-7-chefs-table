@@ -17,7 +17,7 @@ function App() {
         </p>
        </div>
       </div>
-      <div className='container w-11/12 mx-auto flex '>
+      <div className='container w-11/12 mx-auto lg:flex gap-10 '>
         <Recipes></Recipes>
         <Sidebar></Sidebar>
       </div>
