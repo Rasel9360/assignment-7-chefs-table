@@ -18,7 +18,8 @@ const Recipe = ({ recipe, handleCook }) => {
                     <div className="ml-5">
                         <ul className="list-disc">
                             {
-                                ingredients.map(ingredient => <li key=''>{ingredient}</li>)
+                                ingredients.map(ingredient => 
+                                <li key=''>{ingredient}</li>)
                             }
                         </ul>
                         

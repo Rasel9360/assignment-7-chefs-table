@@ -10,10 +10,10 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
   const [recipeCart, setRecipeCart] = useState([]);
+  const [search, setSearch] = useState([]);
 
   const handleCook = (recipe) => {
-    console.log(recipe)
-    // setRecipeCart([...recipeCart, recipe])
+    // console.log(recipe)
     const isExist = recipeCart.find(item => item.id === recipe.id)
     if (!isExist) {
       setRecipeCart([...recipeCart, recipe])
@@ -23,6 +23,16 @@ function App() {
     }
   }
 
+
+  const handleCurrentCook = cook => {
+        // console.log(cook)
+        const  newArr = recipeCart.filter((rec) => rec.id !== cook.id )        
+        setRecipeCart(newArr)
+        setSearch([...search, cook])
+    }
+
+    console.log(search)
+
   return (
 
     <>
@@ -31,13 +41,13 @@ function App() {
         <h1 className='text-5xl font-semibold'>Our Recipes</h1>
         <div className='w-3/5 mx-auto'>
           <p>
-            Explore our extensive collection of recipes spanning various cuisines, dietary preferences, and cooking skill levels. Whether you're a seasoned chef or a novice in the kitchen, you'll find something to tantalize your taste buds
+            Explore our extensive collection of recipes spanning various cuisines, dietary preferences, and cooking skill levels. Whether you are a seasoned chef or a novice in the kitchen, you will find something to tantalize your taste buds
           </p>
         </div>
       </div>
       <div className='container w-11/12 mx-auto lg:flex gap-10 '>
         <Recipes handleCook={handleCook}></Recipes>
-        <Sidebars recipeCart={recipeCart}></Sidebars>
+        <Sidebars search={search} handleCurrentCook={handleCurrentCook} recipeCart={recipeCart}></Sidebars>
       </div>
       <ToastContainer />
     </>
